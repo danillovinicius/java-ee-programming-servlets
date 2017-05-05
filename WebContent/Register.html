@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<hr>
+	<form name="f1" method="POST" action="/java-ee-programming-servlets/Register">
+		<table>
+			<tbody>
+				<tr>
+					<td>User name :</td>
+					<td><input type="text" name="userName" />
+				</tr>
+
+				<tr>
+					<td>Password :</td>
+					<td><input type="password" name="passwd" />
+				</tr>
+
+				<tr>
+					<td>Sex :</td>
+					<td><input type="radio" name="gender" value="Male" /> Male
+						&nbsp; <input type="radio" name="gender" value="Female" />Female
+					</td>
+				</tr>
+
+				<tr>
+					<td>Hobbies :</td>
+					<td><input type="checkbox" name="hobbies" value="Movies" />
+						Movies &nbsp; <input type="checkbox" name="hobbies" value="Music" />Music
+						&nbsp; <input type="checkbox" name="hobbies" value="Sports" />Sports
+						&nbsp;</td>
+				</tr>
+
+				<tr>
+					<td>Country :</td>
+					<td><select name="country">
+							<option value="Australia">Australia</option>
+							<option value="China">China</option>
+							<option value="India">India</option>
+							<option value="USA">USA</option>
+							<option value="UK">UK</option>
+					</select></td>
+				</tr>
+
+				<tr>
+					<td>Languages Known :</td>
+					<td><select name="languages" multiple="multiple">
+							<option value="Arablic">Arabic</option>
+							<option value="Chinese">Chinese</option>
+							<option value="English">English</option>
+							<option value="French">French</option>
+							<option value="Hindi">Hindi</option>
+					</select></td>
+				</tr>
+
+				<tr>
+					<td>&nbsp;</td>
+					<td><input type="submit" value="Register" name="btnRegister" />
+						&nbsp; <input type="reset" value="Clear" name="btnClear" />
+				</tr>
+
+
+			</tbody>
+
+		</table>
+
+	</form>
+</body>
+</html>
