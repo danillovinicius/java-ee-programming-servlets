@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="ISO-8859-1">
+<title>FileUploading Using Servlets</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -13,10 +15,10 @@
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous">
 
-<meta charset="ISO-8859-1">
-<title>GuestBook</title>
 </head>
 <body>
+
+
 	<!-- Fixed navbar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -28,30 +30,24 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Servlets</a>
+				<a class="navbar-brand" href="#">File Uploading Using new Servlets API</a>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
 
 	<div class="container" style="padding-top: 60px">
-
-		<div class="">
-			<form name="frmGuestBookCookie" action="Step2Session" method="Post">
-				<p>Enter Guest Name :</p>
-				<p>
-					<input type="text" name="guestName" />
-				</p>
-				<p>
-					<input class="btn btn-primary" type="submit" name="btnContinue"
-						value="Continue" />
-				</p>
-			</form>
-		</div>
-
+		<form method="Post" action="UploadServlet"
+			enctype="multipart/form-data">
+			<p>Select a File to Upload :</p>
+			<p>
+				<input type="file" name="file" size="60" />
+			</p>
+			<p>
+				<input class="btn btn-primary" type="submit" name="btnSubmit" value="Upload" />
+			</p>
+		</form>
 	</div>
-	<!-- /container -->
-
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
