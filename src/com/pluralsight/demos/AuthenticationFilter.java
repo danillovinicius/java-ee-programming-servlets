@@ -15,7 +15,7 @@ import javax.servlet.annotation.WebFilter;
 /**
  * Servlet Filter implementation class AuthenticationFilter
  */
-@WebFilter("/AuthenticationFilter")
+@WebFilter(filterName = "/AuthenticationFilter", urlPatterns = "/SecuredServlet")
 public class AuthenticationFilter implements Filter {
 
 	/**
@@ -35,7 +35,8 @@ public class AuthenticationFilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
 		System.out.println("doFilter method is called in " + this.getClass().getName());
 
 		String userName = request.getParameter("username");
